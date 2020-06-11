@@ -11,7 +11,22 @@
 @implementation NSString (PigLatin)
 
 -(NSString *)stringByPigLatinization {
-  return [@"CICCC " stringByAppendingString:self];
+    // Tokenizing
+    NSMutableArray *tokenizedString = [NSMutableArray arrayWithArray:[self componentsSeparatedByString: @" "]];
+    NSArray *clusters = @[@"Ch", @"Sh", @"Sm", @"St", @"Th", @"Ps", @"Ph", @"Pl", @"Gl"];
+    
+    for (int i = 0; i< [tokenizedString count]; i++){
+        for ( int j = 0 ; j < [clusters count] ; j++){
+            if ([tokenizedString[i] hasPrefix: clusters[j]]){
+                NSString *newInput = [tokenizedString[i] substringFromIndex:[clusters[j] length]];
+                NSString *newInput2 = [newInput stringByAppendingString:clusters[j]];
+                //[tokenizedString insertObject:newInput2 atIndex:i];
+                [tokenizedString replaceObjectAtIndex:i withObject:newInput2];
+                break;
+            }
+        }
+    }
+    return [tokenizedString componentsJoinedByString:@" "];
 }
 
 @end
