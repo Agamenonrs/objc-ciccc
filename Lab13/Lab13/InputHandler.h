@@ -1,16 +1,18 @@
 //
-//  AdditionQuestion.h
-//  Maths
+//  InputHandler.h
+//  Lab13
 //
 //  Created by Agamenon Rocha Dos Santos on 10/06/20.
 //  Copyright © 2020 Agamenon. All rights reserved.
 //
 
-#import "Question.h"
+#import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface AdditionQuestion : Question
+@interface InputHandler : NSObject
+
++ (NSString *) getUserInput: (NSString *) prompt;
 
 @end
 
