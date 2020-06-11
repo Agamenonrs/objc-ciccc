@@ -18,8 +18,7 @@
     for (int i = 0; i< [tokenizedString count]; i++){
         for ( int j = 0 ; j < [clusters count] ; j++){
             if ([tokenizedString[i] hasPrefix: clusters[j]]){
-                NSString *newInput = [tokenizedString[i] substringFromIndex:[clusters[j] length]];
-                NSString *newInput2 = [newInput stringByAppendingString:clusters[j]];
+                NSString *newInput2 = [[tokenizedString[i] substringFromIndex:[clusters[j] length]] stringByAppendingString:[clusters[j] stringByAppendingString:@"ay"]];
                 //[tokenizedString insertObject:newInput2 atIndex:i];
                 [tokenizedString replaceObjectAtIndex:i withObject:newInput2];
                 break;
