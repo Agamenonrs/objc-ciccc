@@ -26,11 +26,7 @@
 }
 
 -(void) printMenu{
-    NSLog(@"'roll' to roll the dice");
-    NSLog(@"'hold' to hold a dice");
-    NSLog(@"'reset' to un-hold all dice");
-    NSLog(@"'show' to see current dice");
-    NSLog(@"'display' to show current status");
+    NSLog(@"\n'roll' to roll the dice\n'hold' to hold a dice\n'reset' to un-hold all dice\n'show' to see current dice\n'done' to end the game\n'display' to show current stats");
 }
 
 -(void) showInfo{
@@ -51,7 +47,9 @@
     self.heldDices[index-1] =  [self.heldDices[index-1] boolValue] ? [NSNumber numberWithBool:NO] : [NSNumber numberWithBool:YES] ;
 }
 
-
-
-
+-(void) reset{
+    for (int i = 0 ; i< 5; i++){
+        self.heldDices[i] = [NSNumber numberWithBool:NO];
+    }
+}
 @end

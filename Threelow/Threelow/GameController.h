@@ -18,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 -(void) printMenu;
 -(void) showInfo;
 -(void) holdDie: (NSInteger) index;
+-(void) reset;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -22,6 +22,10 @@ int main(int argc, const char * argv[]) {
             [game showInfo];
             NSString *input = [InputHandler getUserInput:@"Play again? "];
             if([input isEqualToString:@"roll"]){
+                play = NO;
+                NSLog(@"Exit");
+            }
+            if([input isEqualToString:@"roll"]){
                 for (Dice *d in [game dices]) {
                     [d getRandomValue];
                     NSLog(@"Dice value %d", [d value]);
@@ -31,11 +35,11 @@ int main(int argc, const char * argv[]) {
                 NSInteger holdIndex = [input intValue];
                 if(holdIndex){
                     [game holdDie:holdIndex];
-                    [game showInfo];
                 }
+            }else if ([input isEqualToString:@"reset"]) {
+                [game reset];
             }else{
-                play = NO;
-                NSLog(@"Exit");
+                NSLog(@"Wrong option");
             }
         }
     }
