@@ -26,6 +26,13 @@ int main(int argc, const char * argv[]) {
                     [d getRandomValue];
                     NSLog(@"Dice value %d", [d value]);
                 }
+            }else if ([input isEqualToString:@"hold"]){
+                NSString *input = [InputHandler getUserInput:@"Enter the number of die:\n? "];
+                NSInteger holdIndex = [input intValue];
+                if(holdIndex){
+                    [game holdDie:holdIndex];
+                    [game showInfo];
+                }
             }else{
                 play = NO;
                 NSLog(@"Exit");

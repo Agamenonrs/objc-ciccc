@@ -38,16 +38,18 @@
     NSLog(@"-------------------");
     NSLog(@"-- Current Dice --");
     NSLog(@"  %@ %@ %@ %@ %@ \n" ,
-          [_heldDices[0] boolValue] ? @"[⚁]" : @"⚁",
-          [_heldDices[1] boolValue] ? @"[⚂]" : @"⚂",
-          [_heldDices[2] boolValue] ? @"[⚃]" : @"⚃",
-          [_heldDices[3] boolValue] ? @"[⚄]" : @"⚄",
-          [_heldDices[4] boolValue] ? @"[⚅]" : @"⚅");
+          [self.heldDices[0] boolValue] ? @"[⚁]" : @"⚁",
+          [self.heldDices[1] boolValue] ? @"[⚂]" : @"⚂",
+          [self.heldDices[2] boolValue] ? @"[⚃]" : @"⚃",
+          [self.heldDices[3] boolValue] ? @"[⚄]" : @"⚄",
+          [self.heldDices[4] boolValue] ? @"[⚅]" : @"⚅");
     NSLog(@"- Total of scores -");
     NSLog(@"score: \n");
  }
 
-
+-(void) holdDie: (NSInteger) index{
+    self.heldDices[index-1] =  [self.heldDices[index-1] boolValue] ? [NSNumber numberWithBool:NO] : [NSNumber numberWithBool:YES] ;
+}
 
 
 
