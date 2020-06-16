@@ -9,20 +9,20 @@
 #import <Foundation/Foundation.h>
 #import "Dice.h"
 #import "InputHandler.h"
+#import "GameController.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        NSMutableArray *array = [[NSMutableArray alloc]init];
-        for (int i = 0 ; i< 5; i++){
-            Dice *d = [[Dice alloc]init];
-            [array addObject:d];
-        }
+        
+        GameController *game = [[GameController alloc]init];
         
         BOOL play = YES;
         while (play) {
+            [game printMenu];
+            [game showInfo];
             NSString *input = [InputHandler getUserInput:@"Play again? "];
             if([input isEqualToString:@"roll"]){
-                for (Dice *d in array) {
+                for (Dice *d in [game dices]) {
                     [d getRandomValue];
                     NSLog(@"Dice value %d", [d value]);
                 }
@@ -30,11 +30,7 @@ int main(int argc, const char * argv[]) {
                 play = NO;
                 NSLog(@"Exit");
             }
-            
-            
         }
-        
-        
     }
     return 0;
 }

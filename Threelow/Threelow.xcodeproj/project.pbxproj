@@ -10,6 +10,7 @@
 		C07221852498746500DA6B0C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C07221842498746500DA6B0C /* main.m */; };
 		C072218D2498751A00DA6B0C /* Dice.m in Sources */ = {isa = PBXBuildFile; fileRef = C072218C2498751A00DA6B0C /* Dice.m */; };
 		C072219024987A7B00DA6B0C /* InputHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = C072218F24987A7B00DA6B0C /* InputHandler.m */; };
+		C072219324987E4800DA6B0C /* GameController.m in Sources */ = {isa = PBXBuildFile; fileRef = C072219224987E4800DA6B0C /* GameController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,8 @@
 		C072218C2498751A00DA6B0C /* Dice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Dice.m; sourceTree = "<group>"; };
 		C072218E24987A7B00DA6B0C /* InputHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InputHandler.h; sourceTree = "<group>"; };
 		C072218F24987A7B00DA6B0C /* InputHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InputHandler.m; sourceTree = "<group>"; };
+		C072219124987E4800DA6B0C /* GameController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameController.h; sourceTree = "<group>"; };
+		C072219224987E4800DA6B0C /* GameController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,8 @@
 				C072218C2498751A00DA6B0C /* Dice.m */,
 				C072218E24987A7B00DA6B0C /* InputHandler.h */,
 				C072218F24987A7B00DA6B0C /* InputHandler.m */,
+				C072219124987E4800DA6B0C /* GameController.h */,
+				C072219224987E4800DA6B0C /* GameController.m */,
 			);
 			path = Threelow;
 			sourceTree = "<group>";
@@ -130,6 +135,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C072218D2498751A00DA6B0C /* Dice.m in Sources */,
+				C072219324987E4800DA6B0C /* GameController.m in Sources */,
 				C072219024987A7B00DA6B0C /* InputHandler.m in Sources */,
 				C07221852498746500DA6B0C /* main.m in Sources */,
 			);
