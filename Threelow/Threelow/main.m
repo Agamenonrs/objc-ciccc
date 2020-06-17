@@ -17,19 +17,18 @@ int main(int argc, const char * argv[]) {
         GameController *game = [[GameController alloc]init];
         
         BOOL play = YES;
-        while (play) {
+        int8_t rolls = 4;
+        while (play && rolls > -1) {
             [game printMenu];
-            [game showInfo];
-            NSString *input = [InputHandler getUserInput:@"Play again? "];
-            if([input isEqualToString:@"roll"]){
+            [game display];
+            NSString *input = [InputHandler getUserInput:@""];
+            if([input isEqualToString:@"done"]){
                 play = NO;
                 NSLog(@"Exit");
             }
             if([input isEqualToString:@"roll"]){
-                for (Dice *d in [game dices]) {
-                    [d getRandomValue];
-                    NSLog(@"Dice value %d", [d value]);
-                }
+                [game rollDice];
+                rolls--;
             }else if ([input isEqualToString:@"hold"]){
                 NSString *input = [InputHandler getUserInput:@"Enter the number of die:\n? "];
                 NSInteger holdIndex = [input intValue];
@@ -37,7 +36,7 @@ int main(int argc, const char * argv[]) {
                     [game holdDie:holdIndex];
                 }
             }else if ([input isEqualToString:@"reset"]) {
-                [game reset];
+                [game resetDice];
             }else{
                 NSLog(@"Wrong option");
             }

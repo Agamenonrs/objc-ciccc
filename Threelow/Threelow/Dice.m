@@ -18,9 +18,8 @@
 }
 
 
-- (uint32_t) getRandomValue{
-    self.value = arc4random_uniform(6) + 1;
-    return self.value;
+- (void) generateRandomValue{
+    self.faceValue = arc4random_uniform(6);
 }
 
 @end

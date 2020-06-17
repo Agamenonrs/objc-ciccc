@@ -12,9 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Dice : NSObject
 
-@property (nonatomic) uint32_t value;
+@property (nonatomic) uint32_t faceValue;
 
-- (uint32_t) getRandomValue;
+- (void) generateRandomValue;
 
 @end
 

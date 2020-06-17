@@ -14,11 +14,13 @@ NS_ASSUME_NONNULL_BEGIN
 @interface GameController : NSObject
 
 @property (nonatomic) NSMutableArray *dices, *heldDices;
+@property (nonatomic) NSArray *emojis;
 
 -(void) printMenu;
--(void) showInfo;
+-(void) display;
 -(void) holdDie: (NSInteger) index;
--(void) reset;
+-(void) resetDice;
+-(void) rollDice;
 @end
 
 NS_ASSUME_NONNULL_END
