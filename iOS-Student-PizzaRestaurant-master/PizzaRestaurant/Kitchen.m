@@ -23,7 +23,7 @@
         
         BOOL shouldUpgrade =  [self.delegate kitchenShouldUpgradeOrder:self];
         if (shouldUpgrade){
-            pizza = [[Pizza alloc]initWithSize:large andToppings:toppings];
+            pizza = [[Pizza alloc]initWithSize:size andToppings:toppings];
         }
         
         if ([self.delegate respondsToSelector:@selector(kitchenDidMakePizza:)]) {
@@ -35,24 +35,6 @@
     }
     
     return pizza;
-}
-
-- (NSString*) pizzaSizeToString:(PizzaSize)size {
-    NSString *result = nil;
-
-    switch(size) {
-        case small:
-            result = @"small";
-            break;
-        case medium:
-            result = @"medium";
-            break;
-        case large:
-            result = @"large";
-            break;
-    }
-
-    return result;
 }
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "Pizza.h"
+#import "AppUtil.h"
 
 @implementation Pizza
 
@@ -43,6 +44,16 @@
             break;
     }
     return price;
+}
+
+- (NSString *)description
+{
+    NSMutableString *toppings = [[NSMutableString alloc]init];
+    for (NSString *s in self.toppings){
+        [toppings appendString: [NSString stringWithFormat:@"%@ ",s]];
+    }
+    
+    return [NSString stringWithFormat:@"Pizza: %@  Size: %@ Price $%lu", toppings,[AppUtil pizzaSizeToString:self.size], self.price ];
 }
 
 @end

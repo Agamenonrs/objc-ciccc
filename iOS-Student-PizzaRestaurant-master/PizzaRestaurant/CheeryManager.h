@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CheeryManager : NSObject <KitchenDelegate>
 
+@property (nonatomic, weak) id<DeliveryDelagate> delegate;
+
 @end
 
 NS_ASSUME_NONNULL_END

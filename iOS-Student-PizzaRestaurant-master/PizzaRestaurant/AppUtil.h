@@ -1,8 +1,8 @@
 //
-//  ManagerHatesAnchovies.h
+//  AppUtil.h
 //  PizzaRestaurant
 //
-//  Created by Agamenon Rocha Dos Santos on 17/06/20.
+//  Created by Agamenon Rocha Dos Santos on 19/06/20.
 //  Copyright © 2020 Lighthouse Labs. All rights reserved.
 //
 
@@ -11,10 +11,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface AngryManager : NSObject <KitchenDelegate>
-
-@property (nonatomic, weak) id<DeliveryDelagate> delegate;
-
+@interface AppUtil : NSObject
++(NSString*) pizzaSizeToString:(PizzaSize)size;
 @end
 
 NS_ASSUME_NONNULL_END

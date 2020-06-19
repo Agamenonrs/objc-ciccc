@@ -19,4 +19,9 @@
     return NO;
 }
 
+-(void)kitchenDidMakePizza:(Pizza *)pizza{
+    NSLog(@"Done! Good job.");
+        [self.delegate deliverPizza:pizza];
+}
+
 @end

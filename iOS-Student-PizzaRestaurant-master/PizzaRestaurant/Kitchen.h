@@ -17,7 +17,17 @@
 -(BOOL)kitchenShouldUpgradeOrder:(Kitchen*) kitchen;
 
 @optional
+
 -(void)kitchenDidMakePizza:(Pizza *)pizza;
+
+@end
+
+@protocol DeliveryDelagate <NSObject>
+
+- (void)deliverPizza:(Pizza *)pizza;
+
+@optional
+-(NSMutableArray*) deleveredPizzaList;
 
 @end
 
@@ -26,8 +36,5 @@
 @property (nonatomic, weak) id<KitchenDelegate> delegate;
 
 - (Pizza *)makePizzaWithSize:(PizzaSize)size toppings:(NSArray *)toppings;
-
-- (NSString*) pizzaSizeToString:(PizzaSize)size;
-
 
 @end
