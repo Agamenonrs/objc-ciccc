@@ -30,15 +30,12 @@
     NSUInteger price;
     switch(self.size){
         case small:
-            NSLog(@"small");
             price =  10;
             break;
         case medium:
-            NSLog(@"medium");
             price = 20;
             break;
         case large:
-            NSLog(@"large");
             price = 30;
             break;
         default:
